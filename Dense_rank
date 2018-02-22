@@ -1,0 +1,1 @@
+ select * from (select EMPNO,ENAME,DEPTNO,sal,DENSE_RANK() OVER (PARTITION BY deptno ORDER BY sal asc) as salrank from scott.emp) where salrank = 2;

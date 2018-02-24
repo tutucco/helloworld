@@ -13,3 +13,4 @@ select  sal,deptno,count(sal) over (order by sal) from scott.emp;
 --pokaz kt�rym kolejnym unikalnym wyst�pieniem przy sortowaniu wg. sal jest bie��cy wiersz
 select empno,ename,deptno,sal,row_number() over (partition by deptno order by sal asc) from scott.emp; 
 --pokaz dla kazdego numer w hierarchi danego deptno wg. wynagrodz.
+---
